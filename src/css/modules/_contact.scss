@@ -1,0 +1,127 @@
+.contact{
+    position: relative;
+    display: flex;
+    width: 960px;
+    max-width: 80%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    
+    
+    @media (max-width: 1180px){
+        max-width: 100%;
+    }
+
+    &--banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        h2{
+            margin: 0 0 20px 0;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .lockup{
+            position: relative;
+            justify-content: center;
+    
+            ul{
+                position: relative;
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 50px;
+                justify-content: center;
+    
+                li{
+                    gap: 20px;
+                }
+    
+                .contact-icon, a{
+                    display: flex;
+                    width: 400px;
+                    text-decoration: none;
+                    color: $white;
+                    gap: 20px;
+                    .centered-image{
+                        display: flex;
+                        justify-content: center; /* Centralize horizontalmente */
+                        align-items: center; /* Centralize verticalmente */
+                    }
+                    a:active {
+                        color: $white; /* Cor do texto quando o link é clicado */
+                    }
+                    .information{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 15px;
+                        h1{
+                            text-align: left;
+                            font-size: 25px;
+                            border: none;
+                            margin: 0;
+                        }
+                        h2{
+                            text-align: left;
+                            font-weight: 300;
+                            font-size: 20px;
+                            border: none;
+                            margin: 0;
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        button{
+            position: relative;
+            padding: 5px 17px 5px 12px;
+            font-weight: 700;
+            font-size: 15px;
+            color: $white;
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 2px ridge $highlight;
+            margin-top: 30px;
+           
+    
+            .btn-background{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                background-color: $highlight;
+                z-index: -1;
+                transition: all .2s ease-in 0s;
+                visibility: hidden;
+                
+            }
+      
+            &:hover{
+                .btn-background{
+                    visibility: visible;
+                }
+            }
+              
+            &:focus{
+                outline: none;
+            }
+             
+            svg{
+              position: relative;
+              left: 5px;
+              width: 15px;
+              fill: $white;
+            }
+       }
+        
+    }
+}

@@ -1,0 +1,144 @@
+.about{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  max-width: 75%;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  font-weight: 900;
+
+
+  @media (max-width: 1180px){
+    max-width: 100%;
+  }
+
+  h1{
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  &--content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    //align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    &--banner{
+      position: relative;
+      height: 100%;
+      width: 2470px;
+      flex-direction: column;
+      ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        justify-content: left;
+        .color{
+          fill: $grey;
+          transition: all .4s ease-in .1s;
+        }
+        .color2{
+          fill: $white;
+          transition: all .4s ease-in .1s;
+        }
+      }
+    }
+  }
+  &--information{
+    justify-content:center; 
+    align-items:center;
+    position: relative;
+    width: 1500px;
+    h2{
+      font-weight: 900;
+      font-size: 25px;
+      transition: all .5s ease-in .1s;
+    }
+    p{
+      font-weight: 300;
+      font-size: 15px;
+      transition: all .5s ease-in .1s;
+    }
+  }
+}
+
+@media (max-width: 767px){
+
+  .about{
+
+    &--banner{
+      height: 305px;
+
+      &::before{
+        top: 0;
+        left: 125px;
+      }
+      &::after{
+        top: 35px;
+        left: 260px;
+      }
+      h2{
+        margin-top: 10px;
+        font-size: 44px;
+
+        &::before{
+          top: 28px;
+          left: 168px;
+        }
+        &::after{
+          top: 163px;
+          left: 163px;
+        }
+      }
+      img{
+        width: 315px;
+      }
+    }
+  }
+}
+@media (max-width: 600px){
+
+  .about{
+
+    &--banner{
+      height: auto;
+
+      &::before{
+        left: 155px;
+      }
+
+      &::after{
+        left: 310px;
+      }
+
+      h2{
+        margin-top: 0;
+        font-size: 55px;
+
+        &::before{
+          top: 43px;
+          left: 214px;
+        }
+        &::after{
+          top: 205px;
+          left: 205px;
+        }
+      }
+      img{
+        display: none
+      }
+    }
+    &--options{
+      display: none
+    }
+  }
+}
